@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: kafkademo
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      auto-offset-reset: latest
+    producer:
+      batch-size: 0
+
+logging:
+  file:
+    name: logs/app.log
+  level:
+    root: INFO
+    hr.zaba.kafkademo: DEBUG
