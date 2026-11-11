@@ -130,7 +130,25 @@ flowchart LR
     Cons --> State
 ```
 
-Fraud detection produceri:
+Fraud detection topic:
+
+```sh
+docker exec --workdir //opt/kafka -it kafka sh \
+bin/kafka-topics.sh --bootstrap-server localhost:9092 \
+--create --topic logins
+```
+
+```sh
+docker exec --workdir //opt/kafka -it kafka sh \
+bin/kafka-topics.sh --bootstrap-server localhost:9092 \
+--create --topic security-events
+```
+
+```sh
+docker exec --workdir //opt/kafka -it kafka sh \
+bin/kafka-topics.sh --bootstrap-server localhost:9092 \
+--create --topic payments
+```
 
 Produceri:
 
