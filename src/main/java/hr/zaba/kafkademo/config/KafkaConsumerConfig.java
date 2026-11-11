@@ -74,7 +74,7 @@ public class KafkaConsumerConfig {
         groupId = "fraud-detection-group"
     )
     public void fraudDetection(String event, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic) {
-        log.debug("Received order: " + event + " from topic: " + topic);
+        log.debug("Received event: " + event + " from topic: " + topic);
     }
 
 }
